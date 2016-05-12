@@ -1,4 +1,4 @@
-var MONGODB_URL = process.env.MONGODB_URL || null;
+var MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost:27017/loopback-angular-admin";
 
 console.log("load mongodb url : " + MONGODB_URL);
 

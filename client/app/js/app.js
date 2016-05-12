@@ -39,6 +39,7 @@
       'schemaForm',
       'ui.select',
       'com.module.core',
+      'com.module.developer',
       'com.module.about',
       'com.module.browser',
       'com.module.events',
