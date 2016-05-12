@@ -1,0 +1,131 @@
+{
+  "name": "developer",
+  "description": "GP service market user's developer role and detail info.",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "hidden": [
+    "deleted",
+    "deleted_at"
+  ],
+  "scope": {
+    "order": "user_id",
+    "where": {
+      "deleted": false
+    }
+  },
+  "properties": {
+    "user_id": {
+      "type": "Number",
+      "required": true,
+      "description": "开发者在GP体系中的用户ID"
+    },
+    "contact_name": {
+      "type": "String",
+      "required": true,
+      "description": "开发者基本信息，联系人姓名"
+    },
+    "contact_telephone": {
+      "type": "String",
+      "required": true,
+      "description": "开发者基本信息，联系人电话"
+    },
+    "contact_email": {
+      "type": "String",
+      "required": true,
+      "description": "开发者基本信息，联系人邮箱"
+    },
+    "type": {
+      "type": "Number",
+      "description": "开发者身份类型，默认为0，个人为1，企业为2",
+      "default": 0
+    },
+    "status": {
+      "type": "Number",
+      "description": "开发者四种状态：未认证0、审核中1、认证未通过2、已认证3;默认为0，未认证",
+      "default": 0
+    },
+    "city": {
+      "type": "String",
+      "description": "所在城市编码"
+    },
+    "address": {
+      "type": "String",
+      "description": "详细地址"
+    },
+    "alipay_account": {
+      "type": "String",
+      "description": "支付宝帐号"
+    },
+    "personal_certificate_number": {
+      "type": "String",
+      "description": "个人开发者身份证号"
+    },
+    "personal_certificate_front": {
+      "type": "String",
+      "description": "个人开发者身份证正面"
+    },
+    "personal_certificate_back": {
+      "type": "String",
+      "description": "个人开发者身份证反面"
+    },
+    "enterprise_name": {
+      "type": "String",
+      "description": "企业名称"
+    },
+    "enterprise_certificate_number": {
+      "type": "String",
+      "description": "营业执照号码"
+    },
+    "enterprise_certificate_picture": {
+      "type": "String",
+      "description": "营业执照照片"
+    },
+    "enterprise_tax_certificate_picture": {
+      "type": "String",
+      "description": "税务登记扫描件"
+    },
+    "enterprise_legal_persion_certificate_front": {
+      "type": "String",
+      "description": "企业法人身份证正面"
+    },
+    "enterprise_legal_persion_certificate_back": {
+      "type": "String",
+      "description": "企业法人身份证反面"
+    },
+    "certified": {
+      "type": "Boolean",
+      "description": "认证状态",
+      "default": false
+    },
+    "certified_at": {
+      "type": "Date",
+      "description": "认证日期"
+    },
+    "created_at": {
+      "type": "Date",
+      "description": "创建日期"
+    },
+    "updated_at": {
+      "type": "Date",
+      "description": "更新日期"
+    },
+    "deleted": {
+      "type": "Boolean",
+      "description": "开发者是否被删除",
+      "default": false
+    },
+    "deleted_at": {
+      "type": "Date",
+      "description": "被删除的日期"
+    }
+  },
+  "validations": [],
+  "relations": {
+    
+  },
+  "acls": [],
+  "methods": {}
+}
