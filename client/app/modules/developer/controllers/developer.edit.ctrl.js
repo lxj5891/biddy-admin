@@ -22,6 +22,5 @@
       $scope.ctrl.back = function() {
         $state.go('^.list');
       };
-
     });
 })();

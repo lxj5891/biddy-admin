@@ -7,6 +7,10 @@
 
       $scope.ctrl = {};
 
+      $scope.page = {};
+      $scope.page = { pageNum: 1 };
+      $scope.page = { pageSize: 10 };
+
       $scope.ctrl.statusRender = function(status) {
           if (status == 0) {
             return "未认证";
@@ -30,7 +34,7 @@
       }
 
       var fetchDeveloper = function() {
-        DevelopersService.find(10, function(data){
+        DevelopersService.find($scope.page.pageNum , $scope.page.pageSize , function(data){
           $scope.ctrl.developers = data;
         });
       };
